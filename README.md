@@ -5,7 +5,7 @@ This contract makes use of [Chainlink](https://github.com/smartcontractkit/chain
 Install
 
 ```bash
-$ yarn install
+$ npm install
 ```
 
 Run Ganache (or any chain running on port 8545)
