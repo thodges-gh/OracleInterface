@@ -15,6 +15,14 @@ contract('MyContract', () => {
     mc = await MyContract.new(link.address, oc.address, {from: defaultAccount});
   });
 
+  it("has a limited public interface", () => {
+    checkPublicABI(MyContract, [
+      "currentPrice",
+      "receiveResult",
+      "requestEthereumPrice"
+    ]);
+  });
+
   describe('#receiveResult', () => {
     let result = 1000000;
     let response = '0x' + encodeUint256(result);
